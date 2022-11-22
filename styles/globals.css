@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+p {
+    font-size: 1em;
+}
+
+p img {
+    height: 1em;
+    float:left;
+}

@@ -1,3 +1,5 @@
+
+
 export const NFTCard = ({ nft }) => {
     return (
         <div className="w-1/4 flex flex-col ">
@@ -8,9 +10,10 @@ export const NFTCard = ({ nft }) => {
                 <div>
                 <h2 className="text-xl text-gray-800">{nft.title}</h2>
                     <p className="text-gray-600">{nft.tokenId}</p>
-                    <p className="text-gray-600">{`${nft.contract.address.substr(0, 5)}...${nft.contract.address.substr(nft.contract.address.length -4)}`}</p>
+                    <p className="text-gray-600">{`${nft.contract.address.substr(0, 5)}...${nft.contract.address.substr(nft.contract.address.length -4)}`} <span><img src="/clipboard.png"></img></span></p>
+                    
                 </div>
-
+                
 
             <div>
                 <p>{nft.description?.substr(0, 150)}</p>
