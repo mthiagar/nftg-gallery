@@ -6,8 +6,8 @@ export const NFTCard = ({ nft }) => {
         var copyText = nft.contract.address;
         navigator.clipboard.writeText(copyText);
         console.log(`Copied address ${copyText}`);
-        
       }
+
     return (
         <div className="w-1/4 flex flex-col ">
             <div className="rounded-md">
@@ -17,8 +17,7 @@ export const NFTCard = ({ nft }) => {
                 <div>
                 <h2 className="text-xl text-gray-800">{nft.title}</h2>
                     <p className="text-gray-600">{nft.tokenId}</p>
-                    <p className="text-gray-600">{`${nft.contract.address.substr(0, 5)}...${nft.contract.address.substr(nft.contract.address.length -4)}`} <span><img onClick={() => copytext()} id="copy-btn" src="/clipboard.png"></img></span></p>
-                    
+                    <p className="text-gray-600">{`${nft.contract.address.substr(0, 5)}...${nft.contract.address.substr(nft.contract.address.length -4)}`} <span id="copy-btn" title="Copy Contract Address"><img onClick={() => copytext()} src="/clipboard.png"></img></span></p>
                 </div>
                 
 
